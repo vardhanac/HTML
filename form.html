@@ -1,0 +1,32 @@
+  
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Form page</title>
+</head>
+<body>
+	<form method="POST" action="details.html">
+		<label>Name:</label><br>
+		<input type="text" name="Username"><br><br>
+		<label>Phone number:</label><br>
+		<input type="tel" name="phone"><br><br>
+		<label>Choice of courses:</label><br>
+		<input type="radio" name="Course" value="bachelors" checked>
+		<label>Bachelors</label><br>
+		<input type="radio" name="Course" value="masters">
+		<label>Masters</label><br><br>
+		<label>Description:</label><br>
+		<textarea name="description" rows="20" cols="50"></textarea><br><br>
+		<label>Subject Interests:</label><br>
+		<input type="checkbox" name="interests" value="dataScince">
+		<label>Data Science</label><br>
+		<input type="checkbox" name="interests" value="ai_ml">
+		<label>AI and ML</label><br>
+		<input type="checkbox" name="interests" value="robotics">
+		<label>Robotics</label><br>
+		<input type="checkbox" name="interests" value="iot">
+		<label>IOT</label><br>
+		<input formenctype="multipart/form-data" type="submit" name="Submit">
+	</form>
+</body>
+</html>
