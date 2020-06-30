@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>JAVASCRIPT TASK</title>
+</head>
+<body>
+	<p id="javascript"></p>
+	<script language="javascript" type="text/javascript">
+		var x=50;
+		var y=81;
+		console.log(x,y);
+		var array=[10.1,21.3,42.4,57.6,87.1];
+		array[4]=(array[4]+array[3]).toString();
+		console.log(array);
+
+		function divide(a, b = 8) {
+			if(b==0)
+			{
+				console.log("b cannot be 0");
+			}
+			else
+			{
+				return a/b;
+			}
+		}
+
+		console.log(divide(7, 2));
+
+		console.log(divide(7));
+
+		var random=Math.random();
+		document.write("Random Number : ", random);
+		document.write("<br>Power Function : ", Math.pow(random,2));
+		document.write("<br>Square Root : ", Math.sqrt(random));
+		document.write("<br>Absolute value : ", Math.abs(random));
+		document.write("<br>Ceil Function : ", Math.ceil(random));
+		document.write("<br>Floor Function : ", Math.floor(random));
+		document.write("<br>Round Function : ", Math.round(random));
+	</script>
+</body>
+</html
