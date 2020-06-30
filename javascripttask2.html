@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Javascript Task 2</title>
+</head>
+<body>
+	<p>Enter the date of your choice : </p><input id="date" type="date" name="date">
+	<input type="submit" name="Submit" onclick="return dateDisplay()">
+	<script language="javascript" type="text/javascript">
+		var x=50;
+		var y=81;
+		console.log(x,y);
+		var array=[10.1,21.3,42.4,57.6,87.1];
+		array[4]=(array[4]+array[3]).toString();
+		console.log(array);
+
+		function divide(a, b = 8) {
+			if(b==0)
+			{
+				console.log("b cannot be 0");
+			}
+			else
+			{
+				return a/b;
+			}
+		}
+
+		console.log(divide(7, 2));
+
+		console.log(divide(7));
+
+		var random=Math.random();
+		document.write("Random Number : ", random);
+		document.write("<br>Power Function : ", Math.pow(random,2));
+		document.write("<br>Square Root : ", Math.sqrt(random));
+		document.write("<br>Absolute value : ", Math.abs(random));
+		document.write("<br>Ceil Function : ", Math.ceil(random));
+		document.write("<br>Floor Function : ", Math.floor(random));
+		document.write("<br>Round Function : ", Math.round(random));
+
+		function dateDisplay()
+		{
+			var date=document.getElementById("date").value;
+			console.log(date);
+		}
+	</script>
+
+	<p>Enter a number between 100 and 200 : </p>
+	<input id="number" type="tel" name="number">
+	<input type="submit" name="Submit" onclick="return validNumber()">
+	<p id="validNum"></p>
+
+	<script>
+		function validNumber()
+		{
+			var num=document.getElementById("number").value;
+			if(num<100 || num>200)
+				alert("Enter a valid number");
+			else
+				alert("Valid number");
+			try{
+				if(num<100)
+					throw "number is too low";
+				else if(num>200)
+					throw "number is too high";
+				else
+					throw "number is valid";
+			}
+			catch(error)
+			{
+				document.getElementById("validNum").innerHTML = "Input "+error;
+			}
+
+		}
+		document.write("<br>Fibonacci series using for loop");
+		var number1=0;
+		var number2=1;
+		for(i=0;i<30;i++)
+		{
+			var temp=number1;
+			number1=number2;
+			number2=temp+number2;
+			document.write("<br>",number2);
+		}
+	</script>
+
+	<p id="description" >1)JavaScript is a programming language that adds interactivity to the website.
+	2)JavaScript ("JS" for short) is a full-fledged dynamic programming language that can add interactivity to a website.
+	3)JavaScript itself is relatively compact, yet very flexible</p>
+	<input type="submit" name="Slice" onclick="return sliceFunc()">
+	<p id="result"></p>
+
+	<script>
+		function sliceFunc()
+		{
+			var string=document.getElementById("description").innerHTML;
+			string = string.split(" ");
+			result = "5th word is \""+string[4]+"\"<br>7th word is \""+string[6]+"\"<br> 10th word is \""+string[9]+"\"";
+			document.getElementById("result").innerHTML=result;
+		}
+	</script>
+
+</body>
+</html>
