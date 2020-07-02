@@ -1,0 +1,89 @@
+<!DOCTYPE html> 
+<html> 
+      
+<head> 
+    <meta charset="utf-8"> 
+    <meta name="viewport" content= 
+        "width=device-width,initial-scale=1">  
+      
+    <title>jQuery UI toggle method</title> 
+      
+    <!--Pre-compiled libraries of jQuery UI -->
+    <link href =  
+"https://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css"
+            rel = "stylesheet"> 
+              
+    <script src =  
+        "https://code.jquery.com/jquery-1.10.2.js"> 
+    </script> 
+      
+    <script src =  
+        "https://code.jquery.com/ui/1.10.4/jquery-ui.js"> 
+    </script> 
+      
+    <style> 
+        .Div { 
+            width: 600px;  
+            height: 200px; 
+        } 
+          
+        #toggleBtn { 
+            padding: .4em 1em; 
+            text-decoration: none;  
+        } 
+      
+        #container {  
+            width: 300px; 
+            height: 150px;  
+            padding: 0.3em; 
+            position: relative; 
+        } 
+  
+        #container h3 {  
+            margin: 0;  
+            padding: 0.4em; 
+            text-align: center; 
+        }     
+  
+        .height{ 
+            height: 10px; 
+        } 
+    </style> 
+          
+    <script> 
+        $(function() { 
+            function toggleEffect() { 
+                $( "#container" ).toggle('pulsate', 1000); 
+            }; 
+              
+            $( "#toggleBtn" ).click(function() { 
+                toggleEffect(); 
+                return false; 
+            }); 
+        }); 
+    </script> 
+</head> 
+      
+<body> 
+    <h1 style="color:Blue"> 
+        Toggle
+    </h1> 
+      
+  
+      
+    <div class="height"></div><br/> 
+      
+    <div class = "Div"> 
+        <div id = "container" >
+              <p  style="color:blue"> 
+            Hi there, this is the day 4 task that is toggle, fadein, fadeout
+            </p> 
+        </div> 
+    </div> 
+      
+    <input type = "button" id = "toggleBtn"
+           
+            value = "Press this button to see the working of above mentioned ones" /> 
+</body> 
+  
+</html> 
